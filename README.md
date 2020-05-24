@@ -15,6 +15,13 @@ brew install nodejs
 node -v
 
 npm install -g hexo-cli
+
+npm install hexo-deployer-git --save
+
+npm install hexo-generator-feed --save
+
+npm i hexo-generator-json-content --save && npm i --save hexo-wordcount
+
 ```
 
 ## Travis-ci
