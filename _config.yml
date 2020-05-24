@@ -9,7 +9,7 @@ description: ''
 keywords:
 author: John Doe
 language: en
-timezone: ''
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -32,7 +32,7 @@ i18n_dir: :lang
 skip_render:
 
 # Writing
-new_post_name: :title.md # File name of new posts
+new_post_name: :year-:month-:day-::title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link:
@@ -46,7 +46,7 @@ relative_link: false
 future: true
 highlight:
   enable: true
-  line_number: true
+  line_number: false
   auto_detect: false
   tab_replace: ''
   wrap: true
@@ -58,7 +58,7 @@ highlight:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 10
+  per_page: 20
   order_by: -date
 
 # Category & Tag
@@ -74,7 +74,7 @@ meta_generator: true
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
-date_format: YYYY-MM-DD
+date_format: YYYY-MM-DD HH:mm
 time_format: HH:mm:ss
 ## Use post's date for updated date unless set in front-matter
 use_date_for_updated: false
@@ -99,7 +99,7 @@ theme: archer
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  message: "Site updated: {{ now('YYYY-MM-DD HH:mm') }}"
+  #message: "Site updated: {{ now('YYYY-MM-DD HH:mm') }}"
   repo: 
     github: git@github.com:tangqiaoboy/tangqiaoboy.github.com.git
   branch: master
